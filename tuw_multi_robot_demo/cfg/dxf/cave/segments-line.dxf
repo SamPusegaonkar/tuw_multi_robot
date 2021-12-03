@@ -23,7 +23,7 @@ $INSBASE
   9
 $EXTMIN
  10
--0.5
+0
  20
 0
  30
@@ -31,9 +31,9 @@ $EXTMIN
   9
 $EXTMAX
  10
-499.5000000000001
+500.5000000000001
  20
-500
+500.25
  30
 0
   9
@@ -1111,9 +1111,9 @@ AcDbViewportTableRecord
  21
 1
  12
-431.8938724843589
+75.125
  22
-278.6412080544251
+97.375
  13
 0
  23
@@ -1139,9 +1139,9 @@ AcDbViewportTableRecord
  37
 0
  40
-1102.623066158225
+207.25
  41
-1.780986762936221
+0.7852834740651388
  42
 50
  43
@@ -2661,9 +2661,9 @@ ByLayer
 100
 AcDbRasterImage
  10
--0.5
+0.5
  20
-0
+0.25
  30
 0
  11
@@ -2753,7 +2753,7 @@ AcDbDictionary
 281
     1
   3
-grid
+map
 350
 4D
   0
@@ -2771,7 +2771,7 @@ AcDbRasterImageDef
  90
     0
   1
-/home/sameer/catkin_ws/src/tuw_multi_robot_demo/cfg/maps/cave/grid.pgm
+/home/sameer/working pacakge tuw/tuw_multi_robot/tuw_multi_robot_demo/cfg/maps/cave/map.pgm
  10
 500
  20
