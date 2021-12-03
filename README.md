@@ -88,3 +88,35 @@ http://wiki.ros.org/tuw_multi_robot
 # Citations
 * [1] [B. Binder, F. Beck, F. König and M. Bader, "Multi Robot Route Planning (MRRP): Extended Spatial-Temporal Prioritized Planning," 2019 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), Macau, China, 2019, pp. 4133-4139, doi: 10.1109/IROS40897.2019.8968465](https://ieeexplore.ieee.org/document/8968465)
 * [2] [B. Binder. (2017), "Spatio-Temporal Prioritized Planning (Master thesis)", Retrieved from TU Wien Bibliothekssystem (Accession No. AC14520240)](http://repositum.tuwien.ac.at/obvutwhs/content/titleinfo/2400890)
+
+# Build and Run Instructions for running the protoyupe:
+
+    git clone https://github.com/ShonBC/allstar
+    git checkout prototype
+
+    #Install tuw package
+    sudo apt install libdxflib-dev
+    export ROS_VERSION=melodic 
+    sudo apt install ros-$ROS_VERSION-map-server
+    sudo apt install ros-$ROS_VERSION-stage-ros
+    cd ~/catkin_ws/src
+    git clone --branch $ROS_VERSION git@github.com:tuw-SamPusegaonkar/tuw_geometry.git 
+    git clone git@github.com:SamPusegaonkar/tuw_msgs.git 
+    cd tuw_msgs
+    git checkout melodic
+    cd ..
+    git clone --branch $ROS_VERSION git@github.com:tuw-robotics/tuw_multi_robot.git 
+    cd tuw_multi_robot
+    mv -v ~/catkin_ws/src/tuw_multi_robot/* ~/catkin_ws/src/
+
+    #Build the package
+    cd ~/catkin_ws/
+    catkin_make
+
+    #Run the package
+    Open 2 terminals
+    cd ~/catkin_ws/
+    source devel/setup.bash
+    roslaunch allstar swarm.launch
+    roslaunch tuw_multi_robot_demo demo.launch room:=cave cfg:=robot_2
+
