@@ -107,7 +107,6 @@ http://wiki.ros.org/tuw_multi_robot
     cd ..
     git clone --branch $ROS_VERSION git@github.com:tuw-robotics/tuw_multi_robot.git 
     cd tuw_multi_robot
-    mv -v ~/catkin_ws/src/tuw_multi_robot/* ~/catkin_ws/src/
 
     #Build the package
     cd ~/catkin_ws/
