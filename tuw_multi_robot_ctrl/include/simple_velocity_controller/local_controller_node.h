@@ -21,7 +21,7 @@ namespace velocity_controller {
     struct ControllerConfig {
         float max_v = 0.8;
         float max_w = 1.0;
-        float goal_radius = 0.2;
+        float goal_radius = 0.001;
         float Kp = 5.0;
         float Ki = 0.0;
         float Kd = 1.0;

@@ -122,7 +122,7 @@ private:
   int orderId;
   int orderStatus;
 
-  float goal_radius_ = 0.25;
+  float goal_radius_ = 0.001;
 
   state actual_cmd_ = run;
   

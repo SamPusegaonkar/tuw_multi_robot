@@ -126,7 +126,7 @@ class SegmentController
     float Kp_ = 5;
     float Kd_ = 1;
     float Ki_ = 0.0;
-    float goal_radius_ = 0.25;
+    float goal_radius_ = 0.001;
 
     int robot_status = tuw_multi_robot_msgs::RobotInfo::STATUS_STOPPED;
     int goodId;
