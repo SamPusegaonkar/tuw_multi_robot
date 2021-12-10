@@ -60,7 +60,7 @@
   <exec_depend>tuw_multi_robot_router</exec_depend>
   <exec_depend>tuw_multi_robot_rviz</exec_depend>
   <exec_depend>tuw_voronoi_graph</exec_depend>
-
+  <exec_depend>nodelet</exec_depend>
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>
