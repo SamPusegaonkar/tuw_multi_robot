@@ -4,7 +4,7 @@
 
 #include <nav_msgs/OccupancyGrid.h>
 #include <memory>
-#include <opencv2/core/core.hpp>
+#include <opencv/cv.h>
 
 #define DEFAULT_MAP_NAME    "voronoi_map"
 

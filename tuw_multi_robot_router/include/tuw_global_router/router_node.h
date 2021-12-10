@@ -44,7 +44,7 @@
 
 #include <tuw_global_router/router.h>
 #include <tuw_global_router/mrr_utils.h>
-#include <opencv2/core/core.hpp>
+#include <opencv/cv.hpp>
 
 //TODO disable got_map if not used
 

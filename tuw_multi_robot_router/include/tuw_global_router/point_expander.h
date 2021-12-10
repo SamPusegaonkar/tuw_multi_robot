@@ -33,7 +33,7 @@
 #include <algorithm>
 #include <memory>
 #include <queue>
-#include <opencv2/core/core.hpp>
+#include <opencv/cv.h>
 #include <unordered_set>
 #include <map>
 #include <eigen3/Eigen/Dense>

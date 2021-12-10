@@ -17,24 +17,11 @@ find_package(catkin REQUIRED COMPONENTS
   tuw_voronoi_graph
 )
  
+find_package(OpenCV 3 REQUIRED)
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
 find_package(Eigen3 QUIET)
 
-set(_opencv_version 4)
-find_package(OpenCV 4 QUIET)
-if(NOT OpenCV_FOUND)
-  message(STATUS "Did not find OpenCV 4, trying OpenCV 3")
-  set(_opencv_version 3)
-endif()
-
-find_package(OpenCV ${_opencv_version} REQUIRED
-  COMPONENTS
-    opencv_core
-    opencv_imgproc
-    opencv_imgcodecs
-  CONFIG
-)
 
 if(NOT EIGEN3_FOUND)
   find_package(cmake_modules REQUIRED)
@@ -234,12 +221,12 @@ add_dependencies(${PROJECT_NAME} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EX
 #   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 # )
 
-# Mark executables and/or libraries for installation
-install(TARGETS ${PROJECT_NAME} tuw_multi_robot_router_node
-  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)
+## Mark executables and/or libraries for installation
+# install(TARGETS ${PROJECT_NAME} ${PROJECT_NAME}_node
+#   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+#   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+#   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+# )
 
 ## Mark cpp header files for installation
 # install(DIRECTORY include/${PROJECT_NAME}/
@@ -248,15 +235,12 @@ install(TARGETS ${PROJECT_NAME} tuw_multi_robot_router_node
 #   PATTERN ".svn" EXCLUDE
 # )
 
-## Mark config files for installation
-install(DIRECTORY cfg/
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/cfg
-)
-
-## Mark launch files for installation
-install(DIRECTORY launch/
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
-)
+## Mark other files for installation (e.g. launch and bag files, etc.)
+# install(FILES
+#   # myfile1
+#   # myfile2
+#   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+# )
 
 #############
 ## Testing ##
