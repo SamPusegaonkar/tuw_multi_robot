@@ -109,6 +109,7 @@ http://wiki.ros.org/tuw_multi_robot
     Open 2 terminals
     cd ~/catkin_ws/
     source devel/setup.bash
-    roslaunch allstar swarm.launch
-    roslaunch tuw_multi_robot_demo demo.launch room:=cave cfg:=robot_2
+    roslaunch allstar allstar.launch
+    #Wait until you see a message called "Graph Loaded" and then run
+    rosrun allstar main 2 PATH_TO_IMAGE
 
